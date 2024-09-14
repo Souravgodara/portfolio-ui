@@ -3,8 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import logoLight from '../../public/images/logo-light.svg';
-import logoDark from '../../public/images/logo-dark.svg';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
@@ -30,8 +28,8 @@ function AppHeader() {
         <div className="flex justify-between items-center px-4 sm:px-0">
           <Link href="/">
               <Image
-                src={activeTheme === 'dark' ? logoDark : logoLight}
-                className="w-36 cursor-pointer"
+                src={activeTheme === 'dark' ? '/logo.png' : '/logo.png'}
+                className="w-36 cursor-pointer rounded-md"
                 alt={`${activeTheme === 'dark' ? 'Dark' : 'Light'} Logo`}
                 width={150}
                 height={120}

@@ -16,8 +16,9 @@ const ProjectSingle = (props) => {
 			}}
 		>
 			<Link
-				href="/projects/[id]"
-				as={'/projects/' + props.id}
+				href={props.url}
+				as={props.url}
+				target='_blank'
 				aria-label="Single Project"
 				passHref
 			>
